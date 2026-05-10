@@ -1,0 +1,165 @@
+/* Reset básico */
+* {
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+}
+
+body {
+    background-color: #121212; /* Fundo escuro premium */
+    color: #f1f1f1;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    min-height: 100vh;
+    padding: 20px;
+}
+
+.container {
+    background-color: #1e1e1e;
+    width: 100%;
+    max-width: 450px;
+    padding: 30px;
+    border-radius: 12px;
+    box-shadow: 0 8px 24px rgba(0,0,0,0.5);
+}
+
+header {
+    text-align: center;
+    margin-bottom: 25px;
+    border-bottom: 1px solid #333;
+    padding-bottom: 15px;
+}
+
+header h1 {
+    color: #e0a96d; /* Tom dourado barbudo */
+    font-size: 1.6rem;
+}
+
+header p {
+    color: #aaa;
+    font-size: 0.9rem;
+    margin-top: 5px;
+}
+
+.input-group {
+    margin-bottom: 20px;
+}
+
+label {
+    display: block;
+    margin-bottom: 8px;
+    font-weight: 500;
+    color: #ccc;
+    font-size: 0.95rem;
+}
+
+input[type="text"], 
+input[type="date"], 
+select {
+    width: 100%;
+    padding: 12px;
+    border: 1px solid #333;
+    background-color: #2a2a2a;
+    color: #fff;
+    border-radius: 6px;
+    font-size: 1rem;
+    outline: none;
+    transition: 0.3s;
+}
+
+input:focus, 
+select:focus {
+    border-color: #e0a96d;
+}
+
+/* Grid de horários interativo */
+.grid-horarios {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    gap: 10px;
+}
+
+.btn-hora {
+    padding: 10px;
+    background-color: #2a2a2a;
+    color: #fff;
+    border: 1px solid #333;
+    border-radius: 6px;
+    cursor: pointer;
+    transition: 0.3s;
+    font-size: 0.9rem;
+}
+
+.btn-hora:hover:not(:disabled) {
+    background-color: #444;
+}
+
+.btn-hora.selecionado {
+    background-color: #e0a96d;
+    color: #121212;
+    border-color: #e0a96d;
+    font-weight: bold;
+}
+
+.btn-hora:disabled {
+    background-color: #1a1a1a;
+    color: #555;
+    text-decoration: line-through;
+    cursor: not-allowed;
+}
+
+.aviso {
+    grid-column: span 3;
+    text-align: center;
+    color: #888;
+    font-size: 0.9rem;
+}
+
+button[type="submit"] {
+    width: 100%;
+    padding: 15px;
+    background-color: #e0a96d;
+    color: #121212;
+    font-weight: bold;
+    font-size: 1.1rem;
+    border: none;
+    border-radius: 6px;
+    cursor: pointer;
+    transition: 0.3s;
+    margin-top: 10px;
+}
+
+button[type="submit"]:disabled {
+    background-color: #444;
+    color: #777;
+    cursor: not-allowed;
+}
+
+button[type="submit"]:hover:not(:disabled) {
+    background-color: #c8955d;
+}
+
+/* Feedback visual */
+.mensagem {
+    margin-top: 15px;
+    padding: 12px;
+    border-radius: 6px;
+    text-align: center;
+    font-weight: bold;
+}
+
+.mensagem.sucesso {
+    background-color: #1b5e20;
+    color: #fff;
+}
+
+.mensagem.erro {
+    background-color: #b71c1c;
+    color: #fff;
+}
+
+.oculto {
+    display: none;
+}
